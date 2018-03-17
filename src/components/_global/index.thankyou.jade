@@ -1,0 +1,21 @@
+doctype html
+
+html(lang="en" class="no-js")
+	
+	include head
+	body(class="thankyou-page mercedes-daimlercac-regular-font" data-page="thankyou-page")
+
+		div(class="container")
+			div(class="" data-name="header")
+				div(class="col-xs-12 col-sm-12 col-md-12 col-lg-12")
+					include ../Header/secondary-header
+			div(class="row full-width" data-name="container")
+				div(class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row-no-padding")
+					include ../Others/thankyou
+			div(class="row" data-name="footer")
+				div(class="col-xs-12 col-sm-12 col-md-12 col-lg-12")
+
+		div(id="back-top" class="back-top js-back-top")
+		div(id="overlay" class="overlay js-overlay")
+		script(type="text/javascript" src="./vendors/package.min.js")
+		script(type="text/javascript" src="./js/bundle.min.js")

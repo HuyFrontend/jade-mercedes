@@ -1,0 +1,18 @@
+doctype html
+
+html(lang="en" class="no-js")
+
+	include head
+	body(class="homepage individual" data-page="homepage")
+
+		.homepage-container
+			block HEADER
+			block CONTAINER
+			block FOOTER
+	
+		div(id="back-top" class="back-top js-back-top")
+		div(id="overlay" class="overlay js-overlay")
+		script(type="text/javascript" src="./vendors/package.min.js")
+		script(type="text/javascript" src="./js/bundle.min.js")
+
+		

@@ -1,0 +1,156 @@
+body {
+    overflow: hidden;
+    &.pace-done { overflow-y: visible; }
+}
+body {
+    div.overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        z-index: 999;
+    }
+    &.pace-done {
+        div.overlay { 
+            overflow: hidden;
+            -webkit-animation: overlay-fadeOut 500ms linear 200ms 1 normal forwards;
+            -moz-animation: overlay-fadeOut 500ms linear 200ms 1 normal forwards;
+            -ms-animation: overlay-fadeOut 500ms linear 200ms 1 normal forwards;
+            -o-animation: overlay-fadeOut 500ms linear 200ms 1 normal forwards;
+            animation: overlay-fadeOut 500ms linear 200ms 1 normal forwards; 
+        }
+    }
+}
+
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    .pace-progress {
+        background: rgba(255, 255, 255, 0.1);
+        position: fixed;
+        z-index: 2000;
+        top: 0;
+        right: 100%;
+        width: 100%;
+        height: 5px;
+    }
+    .pace-progress-inner {
+        display: block;
+        position: absolute;
+        right: 0px;
+        width: 100px;
+        height: 100%;
+        opacity: 1.0;
+        -webkit-transform: rotate(3deg) translate(0px, -4px);
+        -moz-transform: rotate(3deg) translate(0px, -4px);
+        -ms-transform: rotate(3deg) translate(0px, -4px);
+        -o-transform: rotate(3deg) translate(0px, -4px);
+        transform: rotate(3deg) translate(0px, -4px);
+    }
+    .pace-activity {
+        display: block;
+        position: fixed;
+        z-index: 2000;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 30px;
+        margin-left: -15px;
+        margin-top: -15px;
+        border: solid 2px transparent;
+        border-top-color: rgba(255, 255, 255, 0.2);
+        border-left-color: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        -webkit-animation: pace-spinner 400ms linear infinite;
+        -moz-animation: pace-spinner 400ms linear infinite;
+        -ms-animation: pace-spinner 400ms linear infinite;
+        -o-animation: pace-spinner 400ms linear infinite;
+        animation: pace-spinner 400ms linear infinite;
+    }
+    &.pace-inactive {
+        display: none;
+    }
+}
+
+
+@-webkit-keyframes pace-spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-moz-keyframes pace-spinner {
+    0% {
+        -moz-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes pace-spinner {
+    0% {
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@-ms-keyframes pace-spinner {
+    0% {
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes pace-spinner {
+    0% {
+        transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes overlay-fadeOut {
+    0%   { opacity: 1;}
+    99%  { opacity: 0;}
+    100% { opacity: 0; display:none; z-index: -1;}
+}
+@-webkit-keyframes overlay-fadeOut {
+    0%   { opacity: 1;}
+    99%  { opacity: 0;}
+    100% { opacity: 0; display:none; z-index: -1;}
+}
+@-moz-keyframes overlay-fadeOut {
+    0%   { opacity: 1;}
+    99%  { opacity: 0;}
+    100% { opacity: 0; display:none; z-index: -1;}
+}
+@-o-keyframes overlay-fadeOut {
+    0%   { opacity: 1;}
+    99%  { opacity: 0;}
+    100% { opacity: 0; display:none; z-index: -1;}
+}
+@-ms-keyframes overlay-fadeOut {
+    0%   { opacity: 1;}
+    99%  { opacity: 0;}
+    100% { opacity: 0; display:none; z-index: -1;}
+}

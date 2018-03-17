@@ -1,0 +1,137 @@
+$DaimlerCAC-Regular     : 'DaimlerCAC-Regular', Helvetica, Arial, sans-serif;
+$DaimlerCS-Demi         : 'DaimlerCS-Demi', Helvetica, Arial, sans-serif;
+$DaimlerCS-Light        : 'DaimlerCS-Light', Helvetica, Arial, sans-serif;
+$DaimlerCS-Regular      : 'DaimlerCS-Regular', Helvetica, Arial, sans-serif;
+$CorporateA-Bold        : 'CorporateA-Bold', Helvetica, Arial, sans-serif;
+$CorporateA-BoldItalic  : 'CorporateA-BoldItalic', Helvetica, Arial, sans-serif;
+$CorporateA-Demi        : 'CorporateA-Demi', Helvetica, Arial, sans-serif;
+$CorporateA-DemiItalic  : 'CorporateA-DemiItalic', Helvetica, Arial, sans-serif;
+$CorporateA-Light       : 'CorporateA-Light', Helvetica, Arial, sans-serif;
+$CorporateA-LightItalic : 'CorporateA-LightItalic', Helvetica, Arial, sans-serif;
+$CorporateA-Regular     : 'CorporateA-Regular', Helvetica, Arial, sans-serif;
+$CorporateACon-Bol      : 'CorporateACon-Bol', Helvetica, Arial, sans-serif;
+$CorporateACon-BolIta   : 'CorporateACon-BolIta', Helvetica, Arial, sans-serif;
+$CorporateACon-Reg      : 'CorporateACon-Reg', Helvetica, Arial, sans-serif;
+$CorporateACon-RegIta   : 'DaimlerCAC-Regular', Helvetica, Arial, sans-serif;
+
+body {
+    background-repeat: no-repeat;
+    background-position: center 0;
+    font-family: $DaimlerCS-Regular;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $mercedes-white;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+*,
+*:focus,
+*:active { outline: 0; }
+
+.homepage-container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.mercedes-gold-color { color: $mercedes-gold; }
+
+.desktop, .tablet {
+    display: none;
+}
+
+.mobile {
+    display: block;
+}
+
+@media (min-width: $screen-sm-min) {
+    .tablet {
+        display: block;
+    }
+    .mobile, .desktop {
+        display: none;
+    }
+}
+
+@media (min-width: $screen-md-min) {
+    .desktop {
+        display: block;
+    }
+    .mobile, .tablet {
+        display: none;
+    }
+}
+
+.mobile-portrait {
+    display: none;
+}
+
+// Portrait mobile
+@media screen and (max-width: 767px) and (orientation: portrait) {
+    .mobile-portrait {
+        display: block;
+    }
+}
+
+.mercedes-gold-color { color: $mercedes-gold; }
+.mercedes-daimlercac-regular-font { font-family: $DaimlerCAC-Regular; }
+.mercedes-daimlercs-demi-font { font-family: $DaimlerCS-Demi; }
+.mercedes-daimlercs-light-font { font-family: $DaimlerCS-Light; }
+.mercedes-daimlercac-regular-font { font-family: $DaimlerCS-Regular; }
+.mercedes-corporatea-bold-font { font-family: $CorporateA-Bold; }
+.mercedes-corporatea-bolditalic-font { font-family: $CorporateA-BoldItalic; }
+.mercedes-corporatea-demi-font { font-family: $CorporateA-Demi; }
+.mercedes-corporatea-demiitalic-font { font-family: $CorporateA-DemiItalic; }
+.mercedes-corporatea-light-font { font-family: $CorporateA-Light; }
+.mercedes-corporatea-lightitalic-font { font-family: $CorporateA-LightItalic; }
+.mercedes-corporatea-regular-font { font-family: $CorporateA-Regular ; }
+.mercedes-corporateacon-bol-font { font-family: $CorporateACon-Bol; }
+.mercedes-corporateacon-bolita-font { font-family: $CorporateACon-BolIta; }
+.mercedes-corporateacon-reg-font { font-family: $CorporateACon-Reg; }
+.mercedes-corporateacon-regita-font { font-family: $CorporateACon-RegIta; }
+
+.btn-group {
+    a {
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    margin-top: 40px;
+    button {
+        border-radius: 0
+    }
+    .cta-btn {
+        background-image: url('../images/cta-btn-gradient.svg');
+        background-size: cover;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        outline: none;
+        p {
+            line-height: 44px;
+            height: 36px;
+            padding: 0 20px 0 20px;
+            font-size: 18px;
+            letter-spacing: -0.3px;
+            .chevron-left {
+                padding-left: 12px;
+                position: relative;
+                top: 2px;
+            }
+            .chevron-left:after {
+                content: "\f125";
+                font-family: "Ionicons";
+                font-style: normal;
+            }
+        }
+    }
+    .cta-btn:hover {
+        -webkit-animation-name: buttonDim;
+        animation-name: buttonDim;
+        -webkit-animation-duration: .25s;
+        animation-duration: .25s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+}

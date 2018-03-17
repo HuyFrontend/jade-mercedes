@@ -1,0 +1,177 @@
+.other-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h4.mercedes-corporateacon-reg-font {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+    section {
+        .desc {
+            font-size: 10px;
+        }
+        .download {
+            a {
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+            img {
+                width: 13px;
+                height: 11px;
+                margin-right: 5px;
+            }
+            margin-top: 10px;
+        }
+        .title {
+            font-size: 10px;
+            margin-top: 15px;
+            margin-bottom: 7px;
+            font-weight: bold;
+            font-family: $DaimlerCS-Demi;
+        }
+    }
+}
+// thank you page
+.thankyou-page {
+    .container {
+        width: 100% !important;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .page-nav {
+        .container-fluid {
+            padding: 35px 35px 20px 20px;
+        }
+    }
+    .fixed+[data-name="container"] {
+        padding-top: 123px;
+    }
+}
+
+.thank-content {
+    .background-img {
+        position: relative;
+        .holder-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            overflow: hidden;
+        }
+        img {
+            width: 100%;
+            height: auto;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+
+            vertical-align: middle;
+        }
+        .message {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+            color: #000000;
+            font-size: 14px;
+            width: 100%;
+        }
+    }
+    .btn-group {
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .background-img:after {
+        content: "";
+        padding-top: 37%; // heigh/width
+        width: 100%;
+        display: block;
+    }
+}
+@media (max-width: 480px) {
+	.thank-content {
+        .background-img:after {
+            padding-top: 60%;
+        }
+        .btn-group {
+            margin-top: 17px;
+        }
+        .background-img {
+            .message {
+                top: 23%;
+            }
+        }
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+	.thank-content {
+        .background-img:after {
+            padding-top: 50%;
+        }
+        .btn-group {
+            margin-top: 15px;
+        }
+        .background-img {
+            .message {
+                top: 23%;
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (min-width: $screen-sm-min) {
+	.thank-content {
+        .background-img {
+            .message {
+                font-size: 20px;
+            }
+        }
+    }
+    .thankyou-page {
+        .page-nav {
+            &.secondary {
+                padding-bottom: 23px;
+            }
+            .container-fluid {
+                padding: 30px 35px 0 20px;
+            }
+        }
+    }
+}
+@media (max-width: $screen-sm-max) {
+	.thank-content {
+        .background-img {
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
+}
+@media (min-width: $screen-md-min) {
+	.thank-content {
+        .background-img {
+            .message {
+                font-size: 28px;
+            }
+        }
+    }
+}
+@media (min-width: $screen-lg-min) {
+	.thank-content {
+        .background-img {
+            .message {
+                font-size: 35px;
+            }
+        }
+    }
+}

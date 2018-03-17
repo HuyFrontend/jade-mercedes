@@ -1,0 +1,26 @@
+nav.navbar.page-nav
+	.container-fluid
+		.navbar-header
+			button.navbar-toggle.collapsed(type='button', aria-expanded='false')
+				img.icon-open(src="./images/icon/icon-bar-menu.svg", alt="Menu", title="Menu")
+				img.icon-close(src="./images/icon/icon-close.svg", alt="Menu", title="Menu")
+			a.navbar-brand(href='/index.html')
+				img(src="./images/mer-logo-3x.png", alt="Mercedes-Benz", title="Mercedes-Benz")
+			.navbar-logo-text
+		#bs-example-navbar-collapse-1.collapse.navbar-collapse
+			ul.nav.navbar-nav.navbar-right
+				li
+					a(href='https://www.mbfs.com.sg/calculator/', target='_blank', title='Payment Estimator') 
+						span Payment Estimator
+				li
+					a(href='/contact.html', title='Contact us')
+						span Contact Us
+
+	.corp-header
+		ul.corp-link.nav-link
+			li.active.individual
+				a(href='/index.html', title='Individual', aria-controls="home", aria-expanded="true") Individual
+			li
+				span.divide
+			li.corporate
+				a(href="/corporate.html", title='Corporate', aria-controls="home", aria-expanded="true") Corporate
